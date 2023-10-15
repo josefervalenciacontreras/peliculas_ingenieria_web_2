@@ -1,6 +1,6 @@
 /*Con el modelo ORM (object Relation Mapping) mapeado relacional de objetos se va a mapear las colecciones
 que están dentro de mi base de datos Mongo DB y así poder manipularlas sin necesidad de sentencias
-SQl sino con código*/
+SQl sino con código. Mogoose juega el papel de ORM*/
 
 //Importamos con destructuring la clase Schema y la función model de la librería de mongoose
 const { Schema, model} = require('mongoose')

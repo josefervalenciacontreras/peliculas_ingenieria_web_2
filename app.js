@@ -1,15 +1,22 @@
-//Aquí se van a colocar todos los enpoints con la variable use de  la librería "express"
 //Destructuring para importar el objeto de la conexión
 const { conexionMongo } = require('./databases/configuration')
 //Se llama  a la librería dotenv para poder que funcione la conexión a la base de datos
-const dotEnv = require('dotenv').config()
+const dotenv = require('dotenv').config()
 //Se importa al proyecto la librería express
 const express = require('express')
 //Se instancia un objeto app de la clase o librería express
 const app = express()
 
-//importando el documento test de la carpeta routes
+//Midelware o capa intermedia para que pueda leer los formatos json
+app.use(express.json())
+
+//importando el documento test de la carpeta routes e importamos nuestros modulos
 const test = require('./routes/test')
+const generos = require('./routes/genero')
+
+//Aquí se van a colocar todos los recursos con la variable use de  la librería "express"
+app.use('/api/v1/tests', test)
+app.use('/api/v1/generos', generos)
 
 conexionMongo()
 

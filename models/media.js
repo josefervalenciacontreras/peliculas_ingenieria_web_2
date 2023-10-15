@@ -16,6 +16,12 @@ const MediaSchema = Schema({
         type: String,
         require: [true, 'Título requerido']
     },
+    url:{
+        type: String,
+    },
+    imagen: {
+        type: String
+    },
     sinopsis:{
         type: String,
         Require: [true, 'Agregue una sinopsis']

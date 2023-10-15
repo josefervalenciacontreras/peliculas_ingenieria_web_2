@@ -2,7 +2,7 @@
 //Con destructuring se importa lo que tiene la clase Router de la librería expresss
 const {Router} = require('express')
 
-//Importo la función testing desde ell archivo test de la carpeta controller
+//Importo la función testing desde el archivo test de la carpeta controller
 const {testing} = require('../controllers/test')
 //Con el constructor de la clase Router se realiza una instancia router
 const router = Router()
